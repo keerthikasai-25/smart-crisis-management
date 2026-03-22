@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.875rem;
+
+    /* Crisis Management Color System - Light Mode */
+    /* Deep Blue (#1E3A8A) - Primary */
+    --background: 0.98 0 0;
+    --foreground: 0.25 0.08 250;
+    --card: 1 0 0;
+    --card-foreground: 0.25 0.08 250;
+    --popover: 1 0 0;
+    --popover-foreground: 0.25 0.08 250;
+    --primary: 0.35 0.12 250;
+    --primary-foreground: 0.98 0 0;
+
+    /* Teal (#14B8A6) - Secondary */
+    --secondary: 0.72 0.12 180;
+    --secondary-foreground: 0.98 0 0;
+
+    /* Orange (#F97316) - Accent */
+    --accent: 0.68 0.18 35;
+    --accent-foreground: 0.98 0 0;
+
+    --muted: 0.96 0.01 250;
+    --muted-foreground: 0.5 0.02 250;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.92 0.01 250;
+    --input: 0.92 0.01 250;
+    --ring: 0.35 0.12 250;
+
+    /* Chart colors */
+    --chart-1: 0.35 0.12 250;
+    --chart-2: 0.72 0.12 180;
+    --chart-3: 0.68 0.18 35;
+    --chart-4: 0.55 0.15 280;
+    --chart-5: 0.45 0.1 140;
+
+    /* Sidebar */
+    --sidebar: 0.98 0 0;
+    --sidebar-foreground: 0.25 0.08 250;
+    --sidebar-primary: 0.35 0.12 250;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.96 0.01 250;
+    --sidebar-accent-foreground: 0.25 0.08 250;
+    --sidebar-border: 0.92 0.01 250;
+    --sidebar-ring: 0.35 0.12 250;
+
+    /* Custom Crisis Colors */
+    --crisis-blue: 0.35 0.12 250;
+    --crisis-teal: 0.72 0.12 180;
+    --crisis-orange: 0.68 0.18 35;
+  }
+
+  .dark {
+    /* Crisis Management Color System - Dark Mode */
+    --background: 0.15 0.02 250;
+    --foreground: 0.95 0.01 250;
+    --card: 0.2 0.03 250;
+    --card-foreground: 0.95 0.01 250;
+    --popover: 0.18 0.02 250;
+    --popover-foreground: 0.95 0.01 250;
+    --primary: 0.65 0.15 250;
+    --primary-foreground: 0.15 0.02 250;
+
+    --secondary: 0.6 0.15 180;
+    --secondary-foreground: 0.95 0.01 250;
+
+    --accent: 0.65 0.2 35;
+    --accent-foreground: 0.95 0.01 250;
+
+    --muted: 0.25 0.03 250;
+    --muted-foreground: 0.65 0.02 250;
+    --destructive: 0.6 0.22 27;
+    --destructive-foreground: 0.95 0.01 250;
+    --border: 0.3 0.03 250;
+    --input: 0.3 0.03 250;
+    --ring: 0.65 0.15 250;
+
+    /* Chart colors - Dark */
+    --chart-1: 0.65 0.15 250;
+    --chart-2: 0.6 0.15 180;
+    --chart-3: 0.65 0.2 35;
+    --chart-4: 0.6 0.18 280;
+    --chart-5: 0.55 0.12 140;
+
+    /* Sidebar - Dark */
+    --sidebar: 0.18 0.02 250;
+    --sidebar-foreground: 0.95 0.01 250;
+    --sidebar-primary: 0.65 0.15 250;
+    --sidebar-primary-foreground: 0.95 0.01 250;
+    --sidebar-accent: 0.25 0.03 250;
+    --sidebar-accent-foreground: 0.95 0.01 250;
+    --sidebar-border: 0.3 0.03 250;
+    --sidebar-ring: 0.65 0.15 250;
+
+    /* Custom Crisis Colors - Dark */
+    --crisis-blue: 0.65 0.15 250;
+    --crisis-teal: 0.6 0.15 180;
+    --crisis-orange: 0.65 0.2 35;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-crisis-blue {
+    color: oklch(var(--crisis-blue));
+  }
+
+  .text-crisis-teal {
+    color: oklch(var(--crisis-teal));
+  }
+
+  .text-crisis-orange {
+    color: oklch(var(--crisis-orange));
+  }
+
+  .bg-crisis-blue {
+    background-color: oklch(var(--crisis-blue));
+  }
+
+  .bg-crisis-teal {
+    background-color: oklch(var(--crisis-teal));
+  }
+
+  .bg-crisis-orange {
+    background-color: oklch(var(--crisis-orange));
+  }
+
+  .border-crisis-blue {
+    border-color: oklch(var(--crisis-blue));
+  }
+
+  .border-crisis-teal {
+    border-color: oklch(var(--crisis-teal));
+  }
+
+  .border-crisis-orange {
+    border-color: oklch(var(--crisis-orange));
+  }
+}
